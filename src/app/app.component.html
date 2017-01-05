@@ -1,5 +1,81 @@
-<div class="container">
-<h1>
-  hello
-</h1>
-</div>
+
+    <!-- navbar -->
+    <div class="navbar navbar-default">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav id="login-nav" class="navbar navbar-default navbar-fixed-top fade-in hidden-xs affix-top" data-spy="affix" data-offset-top="700">
+                    <div class="container">
+                        <form name="loginform" id="loginform" class="form-inline navbar-form navbar-right" action="#" method="post">
+                            <div class="login-username form-group">
+                                <label for="user_login" class="sr-only">E-mail</label>
+                                <input type="text" name="log" id="user_login" class="input form-control" value="" size="20" placeholder="E-mail"></div>
+                            <div class="login-password form-group"> <label for="user_pass" class="sr-only">Mot de passe</label> <input type="password" name="pwd"
+                                    id="user_pass" class="input form-control" value="" size="20" placeholder="Mot de passe">
+                            </div>
+                            <div class="login-remember hidden">
+                                <label><input name="rememberme" id="rememberme" value="forever" checked="checked" type="checkbox">Garder ma session active</label>
+                            </div>
+                            <div class="login-submit form-group">
+                                <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-primary" value="Se connecter">
+                                <input type="hidden" name="redirect_to" value="/support/sujet/pousser-vers-le-haut-mon-header/">
+                            </div>
+                            <div class="login-register form-group">
+                                <a class="btn btn-default" href="#">S’inscrire</a>
+                            </div>
+                        </form>
+                        <form role="search" method="get" class="search-form form-inline navbar-left navbar-form" action="#">
+                            <div class="input-group">
+                                <label for="search-wpfr">
+                                   <span class="sr-only">Recherche pour :</span>
+                                   </label>
+                                <input id="search-wpfr" type="search" class="search-input search-field form-control" placeholder="Recherche" value="" name="s">
+                                <span class="input-group-btn"> <button type="search" class="search-submit btn btn-default">
+                                       <span class="sr-only">Recherche</span>OK</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation menu vertical -->
+    <div id="sidebar-wrapper">
+        <div class="row">
+            <nav class="col-xs-12 col-md-2 col-lg-2">
+                <ul class="sidebar-nav">
+                    <li>
+                        <div id="page-content-wrapper">
+                            
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <a href="#menu-accueil" class="btn btn-default" id="menu-accueil">Accueil</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    <li>
+                        <li><a class=" ub-btn-nav" routerLink="#" routerLinkActive="btn-primary">Nos Service</a></li>
+                    </li>
+                    <li>
+                        <li><a class=" ub-btn-nav" routerLink="#" routerLinkActive="btn-primary">Message</a></li>
+                    </li>
+                    <li>
+                        <li><a class=" ub-btn-nav" routerLink="#" routerLinkActive="btn-primary">About</a></li>
+                    </li>
+                    <li>
+                        <li><a class=" ub-btn-nav" routerLink="#" routerLinkActive="btn-primary">Contact</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Container -->
+            <div class="col-xs-12 col-md-10 col-lg-10">
+                <router-outlet>
+                </router-outlet>
+            </div>
+        </div>
+    </div>
+
+
